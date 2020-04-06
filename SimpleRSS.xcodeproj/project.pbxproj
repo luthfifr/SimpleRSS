@@ -3,17 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		42A55608243B688A00B5A36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A55607243B688A00B5A36D /* AppDelegate.swift */; };
 		42A5560A243B688A00B5A36D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A55609243B688A00B5A36D /* SceneDelegate.swift */; };
-		42A5560C243B688A00B5A36D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A5560B243B688A00B5A36D /* ViewController.swift */; };
-		42A5560F243B688A00B5A36D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A5560D243B688A00B5A36D /* Main.storyboard */; };
 		42A55611243B688E00B5A36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A55610243B688E00B5A36D /* Assets.xcassets */; };
 		42A55614243B688E00B5A36D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A55612243B688E00B5A36D /* LaunchScreen.storyboard */; };
 		42A5561F243B688F00B5A36D /* SimpleRSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A5561E243B688F00B5A36D /* SimpleRSSTests.swift */; };
+		42A5562D243B6E0B00B5A36D /* RSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A5562C243B6E0B00B5A36D /* RSMainViewController.swift */; };
+		42A5562F243B6E1E00B5A36D /* RSMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A5562E243B6E1E00B5A36D /* RSMainViewModel.swift */; };
+		BFFCC8E4B2C27A8EC2046B12 /* Pods_SimpleRSSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A9776A2AA6BE46388104FE /* Pods_SimpleRSSTests.framework */; };
+		EBE951E0A5AB2D3C8704EA2F /* Pods_SimpleRSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D219C1875523895D8FFE5ED /* Pods_SimpleRSS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +29,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02A9776A2AA6BE46388104FE /* Pods_SimpleRSSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleRSSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		154AB0D2D0FD3C32D543E9AC /* Pods-SimpleRSSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRSSTests.release.xcconfig"; path = "Target Support Files/Pods-SimpleRSSTests/Pods-SimpleRSSTests.release.xcconfig"; sourceTree = "<group>"; };
 		42A55604243B688A00B5A36D /* SimpleRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A55607243B688A00B5A36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A55609243B688A00B5A36D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42A5560B243B688A00B5A36D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		42A5560E243B688A00B5A36D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42A55610243B688E00B5A36D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42A55613243B688E00B5A36D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42A55615243B688E00B5A36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42A5561A243B688F00B5A36D /* SimpleRSSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleRSSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A5561E243B688F00B5A36D /* SimpleRSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRSSTests.swift; sourceTree = "<group>"; };
 		42A55620243B688F00B5A36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A5562C243B6E0B00B5A36D /* RSMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMainViewController.swift; sourceTree = "<group>"; };
+		42A5562E243B6E1E00B5A36D /* RSMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMainViewModel.swift; sourceTree = "<group>"; };
+		5D219C1875523895D8FFE5ED /* Pods_SimpleRSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleRSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B067CDE3C5F2E087336609E /* Pods-SimpleRSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRSS.release.xcconfig"; path = "Target Support Files/Pods-SimpleRSS/Pods-SimpleRSS.release.xcconfig"; sourceTree = "<group>"; };
+		E1D666F6CD32B67094A5F234 /* Pods-SimpleRSSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRSSTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleRSSTests/Pods-SimpleRSSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB91093C83718EEB4C74EEA0 /* Pods-SimpleRSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRSS.debug.xcconfig"; path = "Target Support Files/Pods-SimpleRSS/Pods-SimpleRSS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE951E0A5AB2D3C8704EA2F /* Pods_SimpleRSS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFCC8E4B2C27A8EC2046B12 /* Pods_SimpleRSSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +74,8 @@
 				42A55606243B688A00B5A36D /* SimpleRSS */,
 				42A5561D243B688F00B5A36D /* SimpleRSSTests */,
 				42A55605243B688A00B5A36D /* Products */,
+				9A7D0DF41D69417963D8C900 /* Pods */,
+				E99E8EDE2595B5215CB4BEF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +91,14 @@
 		42A55606243B688A00B5A36D /* SimpleRSS */ = {
 			isa = PBXGroup;
 			children = (
+				42A55615243B688E00B5A36D /* Info.plist */,
 				42A55607243B688A00B5A36D /* AppDelegate.swift */,
 				42A55609243B688A00B5A36D /* SceneDelegate.swift */,
-				42A5560B243B688A00B5A36D /* ViewController.swift */,
-				42A5560D243B688A00B5A36D /* Main.storyboard */,
 				42A55610243B688E00B5A36D /* Assets.xcassets */,
 				42A55612243B688E00B5A36D /* LaunchScreen.storyboard */,
-				42A55615243B688E00B5A36D /* Info.plist */,
+				42A55629243B6DB900B5A36D /* Models */,
+				42A5562B243B6DD200B5A36D /* ViewModels */,
+				42A5562A243B6DCB00B5A36D /* Views */,
 			);
 			path = SimpleRSS;
 			sourceTree = "<group>";
@@ -99,6 +112,49 @@
 			path = SimpleRSSTests;
 			sourceTree = "<group>";
 		};
+		42A55629243B6DB900B5A36D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42A5562A243B6DCB00B5A36D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42A5562C243B6E0B00B5A36D /* RSMainViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		42A5562B243B6DD200B5A36D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				42A5562E243B6E1E00B5A36D /* RSMainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9A7D0DF41D69417963D8C900 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB91093C83718EEB4C74EEA0 /* Pods-SimpleRSS.debug.xcconfig */,
+				8B067CDE3C5F2E087336609E /* Pods-SimpleRSS.release.xcconfig */,
+				E1D666F6CD32B67094A5F234 /* Pods-SimpleRSSTests.debug.xcconfig */,
+				154AB0D2D0FD3C32D543E9AC /* Pods-SimpleRSSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E99E8EDE2595B5215CB4BEF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D219C1875523895D8FFE5ED /* Pods_SimpleRSS.framework */,
+				02A9776A2AA6BE46388104FE /* Pods_SimpleRSSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +162,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42A55623243B688F00B5A36D /* Build configuration list for PBXNativeTarget "SimpleRSS" */;
 			buildPhases = (
+				B06D407C79F92A566DE3D86B /* [CP] Check Pods Manifest.lock */,
 				42A55600243B688A00B5A36D /* Sources */,
 				42A55601243B688A00B5A36D /* Frameworks */,
 				42A55602243B688A00B5A36D /* Resources */,
+				C5F67F03E831B3D1DB0A036C /* [CP] Embed Pods Frameworks */,
+				42A55630243B6F3300B5A36D /* Swiflint Run Script */,
+				42A55631243B6F6100B5A36D /* Bump Up Build Number */,
 			);
 			buildRules = (
 			);
@@ -123,6 +183,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42A55626243B688F00B5A36D /* Build configuration list for PBXNativeTarget "SimpleRSSTests" */;
 			buildPhases = (
+				6B575BEF313FFF98AEC16F28 /* [CP] Check Pods Manifest.lock */,
 				42A55616243B688F00B5A36D /* Sources */,
 				42A55617243B688F00B5A36D /* Frameworks */,
 				42A55618243B688F00B5A36D /* Resources */,
@@ -182,7 +243,6 @@
 			files = (
 				42A55614243B688E00B5A36D /* LaunchScreen.storyboard in Resources */,
 				42A55611243B688E00B5A36D /* Assets.xcassets in Resources */,
-				42A5560F243B688A00B5A36D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +255,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42A55630243B6F3300B5A36D /* Swiflint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swiflint Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		42A55631243B6F6100B5A36D /* Bump Up Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Bump Up Build Number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUILDNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nNEWBUILDNUM=$(($BUILDNUM + 1))\nNEWBUILDNUMSTRING=`echo $NEWBUILDNUM`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $NEWBUILDNUMSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n\n";
+		};
+		6B575BEF313FFF98AEC16F28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleRSSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B06D407C79F92A566DE3D86B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleRSS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5F67F03E831B3D1DB0A036C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleRSS/Pods-SimpleRSS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleRSS/Pods-SimpleRSS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleRSS/Pods-SimpleRSS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		42A55600243B688A00B5A36D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42A5560C243B688A00B5A36D /* ViewController.swift in Sources */,
 				42A55608243B688A00B5A36D /* AppDelegate.swift in Sources */,
 				42A5560A243B688A00B5A36D /* SceneDelegate.swift in Sources */,
+				42A5562F243B6E1E00B5A36D /* RSMainViewModel.swift in Sources */,
+				42A5562D243B6E0B00B5A36D /* RSMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +386,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		42A5560D243B688A00B5A36D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42A5560E243B688A00B5A36D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		42A55612243B688E00B5A36D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,6 +513,7 @@
 		};
 		42A55624243B688F00B5A36D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB91093C83718EEB4C74EEA0 /* Pods-SimpleRSS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +532,7 @@
 		};
 		42A55625243B688F00B5A36D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B067CDE3C5F2E087336609E /* Pods-SimpleRSS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +551,7 @@
 		};
 		42A55627243B688F00B5A36D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D666F6CD32B67094A5F234 /* Pods-SimpleRSSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +574,7 @@
 		};
 		42A55628243B688F00B5A36D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 154AB0D2D0FD3C32D543E9AC /* Pods-SimpleRSSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
