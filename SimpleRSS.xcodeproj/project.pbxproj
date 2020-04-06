@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		4275647A243B95C40084DB39 /* RSMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756479243B95C40084DB39 /* RSMainCollectionViewCell.swift */; };
 		4275647C243BA7000084DB39 /* RSFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275647B243BA7000084DB39 /* RSFirstPageViewController.swift */; };
+		4275647E243BAAB00084DB39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275647D243BAAB00084DB39 /* SceneDelegate.swift */; };
+		42756480243BB1530084DB39 /* RSFirstPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275647F243BB1530084DB39 /* RSFirstPageViewModel.swift */; };
+		42756483243BBD280084DB39 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756482243BBD280084DB39 /* Extension+String.swift */; };
 		42A55608243B688A00B5A36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A55607243B688A00B5A36D /* AppDelegate.swift */; };
-		42A5560A243B688A00B5A36D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A55609243B688A00B5A36D /* SceneDelegate.swift */; };
 		42A55611243B688E00B5A36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A55610243B688E00B5A36D /* Assets.xcassets */; };
 		42A55614243B688E00B5A36D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A55612243B688E00B5A36D /* LaunchScreen.storyboard */; };
 		42A5561F243B688F00B5A36D /* SimpleRSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A5561E243B688F00B5A36D /* SimpleRSSTests.swift */; };
@@ -35,9 +37,11 @@
 		154AB0D2D0FD3C32D543E9AC /* Pods-SimpleRSSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRSSTests.release.xcconfig"; path = "Target Support Files/Pods-SimpleRSSTests/Pods-SimpleRSSTests.release.xcconfig"; sourceTree = "<group>"; };
 		42756479243B95C40084DB39 /* RSMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMainCollectionViewCell.swift; sourceTree = "<group>"; };
 		4275647B243BA7000084DB39 /* RSFirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFirstPageViewController.swift; sourceTree = "<group>"; };
+		4275647D243BAAB00084DB39 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4275647F243BB1530084DB39 /* RSFirstPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFirstPageViewModel.swift; sourceTree = "<group>"; };
+		42756482243BBD280084DB39 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		42A55604243B688A00B5A36D /* SimpleRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A55607243B688A00B5A36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42A55609243B688A00B5A36D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		42A55610243B688E00B5A36D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42A55613243B688E00B5A36D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42A55615243B688E00B5A36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42756481243BBD180084DB39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				42756482243BBD280084DB39 /* Extension+String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		42A555FB243B688A00B5A36D = {
 			isa = PBXGroup;
 			children = (
@@ -95,9 +107,10 @@
 		42A55606243B688A00B5A36D /* SimpleRSS */ = {
 			isa = PBXGroup;
 			children = (
+				42756481243BBD180084DB39 /* Extensions */,
 				42A55615243B688E00B5A36D /* Info.plist */,
 				42A55607243B688A00B5A36D /* AppDelegate.swift */,
-				42A55609243B688A00B5A36D /* SceneDelegate.swift */,
+				4275647D243BAAB00084DB39 /* SceneDelegate.swift */,
 				42A55610243B688E00B5A36D /* Assets.xcassets */,
 				42A55612243B688E00B5A36D /* LaunchScreen.storyboard */,
 				42A55629243B6DB900B5A36D /* Models */,
@@ -137,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				42A5562E243B6E1E00B5A36D /* RSMainViewModel.swift */,
+				4275647F243BB1530084DB39 /* RSFirstPageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -366,12 +380,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42756483243BBD280084DB39 /* Extension+String.swift in Sources */,
 				42A55608243B688A00B5A36D /* AppDelegate.swift in Sources */,
 				4275647C243BA7000084DB39 /* RSFirstPageViewController.swift in Sources */,
-				42A5560A243B688A00B5A36D /* SceneDelegate.swift in Sources */,
 				4275647A243B95C40084DB39 /* RSMainCollectionViewCell.swift in Sources */,
 				42A5562F243B6E1E00B5A36D /* RSMainViewModel.swift in Sources */,
+				42756480243BB1530084DB39 /* RSFirstPageViewModel.swift in Sources */,
 				42A5562D243B6E0B00B5A36D /* RSMainViewController.swift in Sources */,
+				4275647E243BAAB00084DB39 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
