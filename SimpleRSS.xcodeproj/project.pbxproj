@@ -12,6 +12,13 @@
 		4275647E243BAAB00084DB39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275647D243BAAB00084DB39 /* SceneDelegate.swift */; };
 		42756480243BB1530084DB39 /* RSFirstPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275647F243BB1530084DB39 /* RSFirstPageViewModel.swift */; };
 		42756483243BBD280084DB39 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756482243BBD280084DB39 /* Extension+String.swift */; };
+		42756487243BBFB80084DB39 /* Extension+MoyaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756486243BBFB80084DB39 /* Extension+MoyaResponse.swift */; };
+		42756489243BBFFB0084DB39 /* RSMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756488243BBFFB0084DB39 /* RSMoyaProvider.swift */; };
+		4275648B243BC0330084DB39 /* RSNetworkEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275648A243BC0330084DB39 /* RSNetworkEvent.swift */; };
+		4275648E243BC0D80084DB39 /* RSServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275648D243BC0D80084DB39 /* RSServiceError.swift */; };
+		42756490243BC5190084DB39 /* RSFirstPageTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275648F243BC5190084DB39 /* RSFirstPageTarget.swift */; };
+		42756492243BC5880084DB39 /* RSFirstPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756491243BC5880084DB39 /* RSFirstPageService.swift */; };
+		42756495243BC6040084DB39 /* RSFirstPageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756494243BC6040084DB39 /* RSFirstPageDataModel.swift */; };
 		42A55608243B688A00B5A36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A55607243B688A00B5A36D /* AppDelegate.swift */; };
 		42A55611243B688E00B5A36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A55610243B688E00B5A36D /* Assets.xcassets */; };
 		42A55614243B688E00B5A36D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A55612243B688E00B5A36D /* LaunchScreen.storyboard */; };
@@ -40,6 +47,13 @@
 		4275647D243BAAB00084DB39 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4275647F243BB1530084DB39 /* RSFirstPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFirstPageViewModel.swift; sourceTree = "<group>"; };
 		42756482243BBD280084DB39 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		42756486243BBFB80084DB39 /* Extension+MoyaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+MoyaResponse.swift"; sourceTree = "<group>"; };
+		42756488243BBFFB0084DB39 /* RSMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMoyaProvider.swift; sourceTree = "<group>"; };
+		4275648A243BC0330084DB39 /* RSNetworkEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNetworkEvent.swift; sourceTree = "<group>"; };
+		4275648D243BC0D80084DB39 /* RSServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSServiceError.swift; sourceTree = "<group>"; };
+		4275648F243BC5190084DB39 /* RSFirstPageTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFirstPageTarget.swift; sourceTree = "<group>"; };
+		42756491243BC5880084DB39 /* RSFirstPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFirstPageService.swift; sourceTree = "<group>"; };
+		42756494243BC6040084DB39 /* RSFirstPageDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFirstPageDataModel.swift; sourceTree = "<group>"; };
 		42A55604243B688A00B5A36D /* SimpleRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A55607243B688A00B5A36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A55610243B688E00B5A36D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,8 +94,44 @@
 			isa = PBXGroup;
 			children = (
 				42756482243BBD280084DB39 /* Extension+String.swift */,
+				42756486243BBFB80084DB39 /* Extension+MoyaResponse.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		42756484243BBF520084DB39 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				42756485243BBF5A0084DB39 /* Networking */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		42756485243BBF5A0084DB39 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				42756488243BBFFB0084DB39 /* RSMoyaProvider.swift */,
+				4275648A243BC0330084DB39 /* RSNetworkEvent.swift */,
+				4275648F243BC5190084DB39 /* RSFirstPageTarget.swift */,
+				42756491243BC5880084DB39 /* RSFirstPageService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4275648C243BC0C20084DB39 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				4275648D243BC0D80084DB39 /* RSServiceError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		42756493243BC5EA0084DB39 /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				42756494243BC6040084DB39 /* RSFirstPageDataModel.swift */,
+			);
+			path = FirstPage;
 			sourceTree = "<group>";
 		};
 		42A555FB243B688A00B5A36D = {
@@ -107,11 +157,12 @@
 		42A55606243B688A00B5A36D /* SimpleRSS */ = {
 			isa = PBXGroup;
 			children = (
-				42756481243BBD180084DB39 /* Extensions */,
 				42A55615243B688E00B5A36D /* Info.plist */,
 				42A55607243B688A00B5A36D /* AppDelegate.swift */,
 				4275647D243BAAB00084DB39 /* SceneDelegate.swift */,
 				42A55610243B688E00B5A36D /* Assets.xcassets */,
+				42756484243BBF520084DB39 /* Common */,
+				42756481243BBD180084DB39 /* Extensions */,
 				42A55612243B688E00B5A36D /* LaunchScreen.storyboard */,
 				42A55629243B6DB900B5A36D /* Models */,
 				42A5562B243B6DD200B5A36D /* ViewModels */,
@@ -132,6 +183,8 @@
 		42A55629243B6DB900B5A36D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				42756493243BC5EA0084DB39 /* FirstPage */,
+				4275648C243BC0C20084DB39 /* Error */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -382,11 +435,18 @@
 			files = (
 				42756483243BBD280084DB39 /* Extension+String.swift in Sources */,
 				42A55608243B688A00B5A36D /* AppDelegate.swift in Sources */,
+				4275648B243BC0330084DB39 /* RSNetworkEvent.swift in Sources */,
 				4275647C243BA7000084DB39 /* RSFirstPageViewController.swift in Sources */,
+				42756489243BBFFB0084DB39 /* RSMoyaProvider.swift in Sources */,
 				4275647A243B95C40084DB39 /* RSMainCollectionViewCell.swift in Sources */,
 				42A5562F243B6E1E00B5A36D /* RSMainViewModel.swift in Sources */,
+				42756490243BC5190084DB39 /* RSFirstPageTarget.swift in Sources */,
+				4275648E243BC0D80084DB39 /* RSServiceError.swift in Sources */,
 				42756480243BB1530084DB39 /* RSFirstPageViewModel.swift in Sources */,
+				42756487243BBFB80084DB39 /* Extension+MoyaResponse.swift in Sources */,
+				42756495243BC6040084DB39 /* RSFirstPageDataModel.swift in Sources */,
 				42A5562D243B6E0B00B5A36D /* RSMainViewController.swift in Sources */,
+				42756492243BC5880084DB39 /* RSFirstPageService.swift in Sources */,
 				4275647E243BAAB00084DB39 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
