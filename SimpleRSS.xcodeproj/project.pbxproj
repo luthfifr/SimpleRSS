@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4275647A243B95C40084DB39 /* RSMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756479243B95C40084DB39 /* RSMainCollectionViewCell.swift */; };
+		4275647C243BA7000084DB39 /* RSFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275647B243BA7000084DB39 /* RSFirstPageViewController.swift */; };
 		42A55608243B688A00B5A36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A55607243B688A00B5A36D /* AppDelegate.swift */; };
 		42A5560A243B688A00B5A36D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A55609243B688A00B5A36D /* SceneDelegate.swift */; };
 		42A55611243B688E00B5A36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A55610243B688E00B5A36D /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		02A9776A2AA6BE46388104FE /* Pods_SimpleRSSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleRSSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		154AB0D2D0FD3C32D543E9AC /* Pods-SimpleRSSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRSSTests.release.xcconfig"; path = "Target Support Files/Pods-SimpleRSSTests/Pods-SimpleRSSTests.release.xcconfig"; sourceTree = "<group>"; };
+		42756479243B95C40084DB39 /* RSMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSMainCollectionViewCell.swift; sourceTree = "<group>"; };
+		4275647B243BA7000084DB39 /* RSFirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFirstPageViewController.swift; sourceTree = "<group>"; };
 		42A55604243B688A00B5A36D /* SimpleRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A55607243B688A00B5A36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A55609243B688A00B5A36D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				42A5562C243B6E0B00B5A36D /* RSMainViewController.swift */,
+				42756479243B95C40084DB39 /* RSMainCollectionViewCell.swift */,
+				4275647B243BA7000084DB39 /* RSFirstPageViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -361,7 +367,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A55608243B688A00B5A36D /* AppDelegate.swift in Sources */,
+				4275647C243BA7000084DB39 /* RSFirstPageViewController.swift in Sources */,
 				42A5560A243B688A00B5A36D /* SceneDelegate.swift in Sources */,
+				4275647A243B95C40084DB39 /* RSMainCollectionViewCell.swift in Sources */,
 				42A5562F243B6E1E00B5A36D /* RSMainViewModel.swift in Sources */,
 				42A5562D243B6E0B00B5A36D /* RSMainViewController.swift in Sources */,
 			);
@@ -447,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -501,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

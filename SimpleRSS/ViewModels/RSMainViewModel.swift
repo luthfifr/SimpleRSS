@@ -9,16 +9,5 @@
 import Foundation
 import RxSwift
 
-enum RSMainViewModelEvents: Equatable {
-}
-
-protocol RSMainViewModelType {
-    var uiEvents: PublishSubject<RSMainViewModelEvents> { get }
-    var viewModelEvents: PublishSubject<RSMainViewModelEvents> { get }
-//    var responseData: USResponse? { get }
-}
-
-final class RSMainViewModel: RSMainViewModelType {
-    let uiEvents = PublishSubject<RSMainViewModelEvents>()
-    let viewModelEvents = PublishSubject<RSMainViewModelEvents>()
+final class RSMainViewModel {
 }
