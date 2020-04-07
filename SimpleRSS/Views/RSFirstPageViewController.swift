@@ -54,6 +54,8 @@ extension RSFirstPageViewController {
                 switch event {
                 case .openNextVC(let dataModel):
                     self.openNextVC(with: dataModel)
+                case .openURLError(let error, let otherMsg):
+                    self.showError(error, otherMsg)
                 default: break
                 }
             }).disposed(by: disposeBag)
@@ -142,5 +144,23 @@ extension RSFirstPageViewController {
         viewModel.dataModel = data
         let mainVC = RSMainViewController(viewModel: viewModel)
         self.navigationController?.pushViewController(mainVC, animated: true)
+    }
+
+    private func showError(_ error: RSServiceError?, _ otherMsg: String?) {
+        var alertModel = UIAlertModel(style: .alert)
+        if let error = error {
+            alertModel.message = error.responseString ?? String()
+        } else if let msg = otherMsg {
+            alertModel.message = msg
+        }
+        alertModel.title = "Request Data Failure"
+        alertModel.actions = [UIAlertActionModel(title: "OK", style: .cancel)]
+        self.showAlert(with: alertModel)
+            .asObservable()
+            .subscribe(onNext: { selectedActionIdx in
+                #if DEBUG
+                print("alert action index = \(selectedActionIdx)")
+                #endif
+            }).disposed(by: self.disposeBag)
     }
 }

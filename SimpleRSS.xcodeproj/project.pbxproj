@@ -19,6 +19,8 @@
 		42756490243BC5190084DB39 /* RSFirstPageTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275648F243BC5190084DB39 /* RSFirstPageTarget.swift */; };
 		42756492243BC5880084DB39 /* RSFirstPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756491243BC5880084DB39 /* RSFirstPageService.swift */; };
 		42756495243BC6040084DB39 /* RSFirstPageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756494243BC6040084DB39 /* RSFirstPageDataModel.swift */; };
+		42756497243C2F5E0084DB39 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756496243C2F5E0084DB39 /* Extension+UIViewController.swift */; };
+		4275649A243C2F990084DB39 /* UIAlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42756499243C2F990084DB39 /* UIAlertModel.swift */; };
 		42A55608243B688A00B5A36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A55607243B688A00B5A36D /* AppDelegate.swift */; };
 		42A55611243B688E00B5A36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A55610243B688E00B5A36D /* Assets.xcassets */; };
 		42A55614243B688E00B5A36D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A55612243B688E00B5A36D /* LaunchScreen.storyboard */; };
@@ -54,6 +56,8 @@
 		4275648F243BC5190084DB39 /* RSFirstPageTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFirstPageTarget.swift; sourceTree = "<group>"; };
 		42756491243BC5880084DB39 /* RSFirstPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFirstPageService.swift; sourceTree = "<group>"; };
 		42756494243BC6040084DB39 /* RSFirstPageDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFirstPageDataModel.swift; sourceTree = "<group>"; };
+		42756496243C2F5E0084DB39 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		42756499243C2F990084DB39 /* UIAlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertModel.swift; sourceTree = "<group>"; };
 		42A55604243B688A00B5A36D /* SimpleRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A55607243B688A00B5A36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A55610243B688E00B5A36D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			children = (
 				42756482243BBD280084DB39 /* Extension+String.swift */,
 				42756486243BBFB80084DB39 /* Extension+MoyaResponse.swift */,
+				42756496243C2F5E0084DB39 /* Extension+UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -132,6 +137,14 @@
 				42756494243BC6040084DB39 /* RSFirstPageDataModel.swift */,
 			);
 			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		42756498243C2F870084DB39 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				42756499243C2F990084DB39 /* UIAlertModel.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		42A555FB243B688A00B5A36D = {
@@ -183,6 +196,7 @@
 		42A55629243B6DB900B5A36D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				42756498243C2F870084DB39 /* UI */,
 				42756493243BC5EA0084DB39 /* FirstPage */,
 				4275648C243BC0C20084DB39 /* Error */,
 			);
@@ -433,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42756497243C2F5E0084DB39 /* Extension+UIViewController.swift in Sources */,
 				42756483243BBD280084DB39 /* Extension+String.swift in Sources */,
 				42A55608243B688A00B5A36D /* AppDelegate.swift in Sources */,
 				4275648B243BC0330084DB39 /* RSNetworkEvent.swift in Sources */,
@@ -448,6 +463,7 @@
 				42A5562D243B6E0B00B5A36D /* RSMainViewController.swift in Sources */,
 				42756492243BC5880084DB39 /* RSFirstPageService.swift in Sources */,
 				4275647E243BAAB00084DB39 /* SceneDelegate.swift in Sources */,
+				4275649A243C2F990084DB39 /* UIAlertModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ import RxSwift
 enum RSFirstPageViewModelEvent {
     case open(url: String)
     case openNextVC(data: RSFirstPageDataModel)
+    case openURLError(_ error: RSServiceError?, _ otherMsg: String?)
 }
 
 final class RSFirstPageViewModel {
@@ -54,12 +55,12 @@ extension RSFirstPageViewModel {
                 case .waiting: break
                 case .succeeded(let dataModel):
                     guard let responseStr = dataModel.responseString, !responseStr.contains("html") else {
-                        print("the webpage is HTML, not XML")
+                        self.uiEvent.onNext(.openURLError(nil, "the webpage is HTML, not XML"))
                         return
                     }
                     self.uiEvent.onNext(.openNextVC(data: dataModel))
                 case .failed(let error):
-                    print(error.error?.errorDescription ?? String())
+                    self.uiEvent.onNext(.openURLError(error, nil))
                 }
             }).disposed(by: disposeBag)
     }
