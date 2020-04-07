@@ -16,6 +16,7 @@ class RSMainCollectionViewCell: UICollectionViewCell {
     private var roundedCornerView: UIView!
     private var imgView: UIImageView!
     private var labelTitle: UILabel!
+    private var labelDate: UILabel!
     private var labelDesc: UILabel!
 
     // MARK: - Initialization
@@ -42,6 +43,7 @@ extension RSMainCollectionViewCell {
         setupRoundedCornerView()
         setupImageView()
         setupLabelTitle()
+        setupLabelDate()
         setupLabelDesc()
     }
 
@@ -124,9 +126,33 @@ extension RSMainCollectionViewCell {
         }
 
         labelTitle.snp.makeConstraints({ make in
-            make.top.equalTo(imgView.snp.bottom).offset(20)
+            make.top.equalTo(imgView.snp.bottom).offset(15)
             make.leading.equalTo(roundedCornerView.snp.leading).offset(16)
             make.trailing.equalTo(roundedCornerView.snp.trailing).offset(-16)
+        })
+    }
+
+    private func setupLabelDate() {
+        guard labelDate == nil else {
+            return
+        }
+
+        labelDate = UILabel(frame: .zero)
+        labelDate.backgroundColor = .clear
+        labelDate.textColor = UIColor.black.withAlphaComponent(0.5)
+        labelDate.font = UIFont.systemFont(ofSize: 10)
+        labelDate.numberOfLines = 0
+        labelDate.textAlignment = .left
+        labelDate.translatesAutoresizingMaskIntoConstraints = false
+
+        if !roundedCornerView.subviews.contains(labelDate) {
+            roundedCornerView.addSubview(labelDate)
+        }
+
+        labelDate.snp.makeConstraints({ make in
+            make.top.equalTo(labelTitle.snp.bottom).offset(5)
+            make.leading.equalTo(labelTitle.snp.leading)
+            make.trailing.equalTo(labelTitle.snp.trailing)
         })
     }
 
@@ -148,7 +174,7 @@ extension RSMainCollectionViewCell {
         }
 
         labelDesc.snp.makeConstraints({ make in
-            make.top.equalTo(labelTitle.snp.bottom).offset(20)
+            make.top.equalTo(labelDate.snp.bottom).offset(10)
             make.leading.equalTo(labelTitle.snp.leading)
             make.trailing.equalTo(labelTitle.snp.trailing)
             make.bottom.equalToSuperview().offset(-16)
@@ -158,8 +184,8 @@ extension RSMainCollectionViewCell {
 
 // MARK: - Public methods
 extension RSMainCollectionViewCell {
-    func setData() {
-        imgView.sd_setImage(with: URL(string: "https://www.inforexnews.com/wp-content/uploads/2019/11/Emas-Gold.jpg")) { [weak self] image, error, _, _ in
+    func setData(with data: RSFirstPageDataModel.RSSItem) {
+        imgView.sd_setImage(with: URL(string: data.description?.image ?? String())) { [weak self] image, error, _, _ in
             guard let `self` = self else { return }
             if let error = error {
                 #if DEBUG
@@ -171,7 +197,8 @@ extension RSMainCollectionViewCell {
 //                self.bannerImgView.image = UIImage(named: "banner-hci")
 //            }
         }
-        labelTitle.text = "Lorem Ipsum"
-        labelDesc.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." //swiftlint:disable:this line_length
+        labelTitle.text = data.title ?? String()
+        labelDate.text = data.pubDate ?? String()
+        labelDesc.text = data.description?.text ?? String()
     }
 }

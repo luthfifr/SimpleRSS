@@ -7,7 +7,7 @@ target 'SimpleRSS' do
   use_frameworks!
 
   # Pods for SimpleRSS
-    pod 'HandyJSON', '~> 5.0'
+    pod 'SwiftSoup', '~> 2.0'
     pod 'Moya/RxSwift', '~> 13.0'
     pod 'ReachabilitySwift', '~> 4.0'
     pod 'RxOptional', '~> 3.0'

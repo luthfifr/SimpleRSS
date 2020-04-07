@@ -41,10 +41,24 @@ class RSFirstPageViewController: UIViewController {
         setupUI()
         prepareSubmitButton()
         prepareTextField()
+        setupEvents()
     }
 }
 
 extension RSFirstPageViewController {
+    private func setupEvents() {
+        viewModel
+            .uiEvent
+            .subscribe(onNext: { [weak self] event in
+                guard let `self` = self else { return }
+                switch event {
+                case .openNextVC(let dataModel):
+                    self.openNextVC(with: dataModel)
+                default: break
+                }
+            }).disposed(by: disposeBag)
+    }
+
     private func setupUI() {
         setupButton()
         setupTextField()
@@ -117,10 +131,16 @@ extension RSFirstPageViewController {
             .tap
             .asObservable()
             .subscribe(onNext: { [weak self] in
-                guard let `self` = self else { return }
-                let viewModel = RSMainViewModel()
-                let mainVC = RSMainViewController(viewModel: viewModel)
-                self.navigationController?.pushViewController(mainVC, animated: true)
+                guard let `self` = self,
+                    let txt = self.urlTextField.text else { return }
+                self.viewModel.viewModelEvent.onNext(.open(url: txt))
             }).disposed(by: disposeBag)
+    }
+
+    private func openNextVC(with data: RSFirstPageDataModel) {
+        let viewModel = RSMainViewModel()
+        viewModel.dataModel = data
+        let mainVC = RSMainViewController(viewModel: viewModel)
+        self.navigationController?.pushViewController(mainVC, animated: true)
     }
 }

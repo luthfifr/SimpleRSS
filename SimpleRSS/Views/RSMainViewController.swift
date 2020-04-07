@@ -40,10 +40,9 @@ class RSMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "RSS Reader"
+        title = viewModel.dataModel?.title ?? "RSS Reader"
         view.backgroundColor = .white
 
-        setupEvents()
         setupUI()
     }
 }
@@ -51,9 +50,6 @@ class RSMainViewController: UIViewController {
 extension RSMainViewController {
     private func setupUI() {
         setupCollectionView()
-    }
-
-    private func setupEvents() {
     }
 
     private func setupCollectionView() {
@@ -82,7 +78,11 @@ extension RSMainViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        guard let data = viewModel.dataModel,
+            let items = data.items else {
+            return 0
+        }
+        return items.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -99,8 +99,10 @@ extension RSMainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
-        guard let cell = cell as? Cell else { return }
-        cell.setData()
+        guard let cell = cell as? Cell,
+            let data = viewModel.dataModel,
+            let items = data.items else { return }
+        cell.setData(with: items[indexPath.item])
     }
 
     func collectionView(_ collectionView: UICollectionView,
