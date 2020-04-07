@@ -193,9 +193,9 @@ extension RSMainCollectionViewCell {
                 #endif
             }
 
-//            if image == nil {
-//                self.bannerImgView.image = UIImage(named: "banner-hci")
-//            }
+            if image == nil {
+                self.imgView.image = UIImage(named: "RSS-logo")
+            }
         }
         labelTitle.text = data.title ?? String()
         labelDate.text = data.pubDate ?? String()
